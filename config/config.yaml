@@ -1,0 +1,12 @@
+server:
+  port: 8088
+
+database:
+  driver: postgres
+  user: goservice
+  password: Go-SeRvIcE482
+  name: goservice
+  host: postgres
+  port: 5432
+  
+  
