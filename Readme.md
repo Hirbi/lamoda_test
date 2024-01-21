@@ -2,7 +2,9 @@
 
 ## Methods
 ### Reserve products
-__scripts_examples/reserve_codes.sh__
+
+__scripts_examples/reserve_codes.sh__<br>
+Резервирование продуктов 
 ```
 curl -X POST \
    http://localhost:8088/rpc \
@@ -13,14 +15,15 @@ curl -X POST \
    "id": "1"
 }'
 ```
-Result
+Результат
 
 ```
 {"result":"reserved","error":null,"id":"1"}
 ```
 
 ### Release products
-__scripts_examples/release_codes.sh__
+__scripts_examples/release_codes.sh__<br>
+Освобождение резерва товаров
 ```
 curl -X POST \
    http://localhost:8088/rpc \
@@ -31,13 +34,14 @@ curl -X POST \
    "id": "1"
 }'
 ```
-Result
+Результат
 ```
 {"result":"released","error":null,"id":"1"}
 ```
 
 ### Available products on storage
-__scripts_examples/available_products.sh__
+__scripts_examples/available_products.sh__ <br>
+Получение кол-ва оставшихся товаров на складе
 ```
 curl -X POST \
    http://localhost:8088/rpc \
@@ -48,7 +52,7 @@ curl -X POST \
    "id": "1"
 }'
 ```
-Result
+Результат
 ```
 {
   "result": [
@@ -81,12 +85,12 @@ Result
   "id": "1"
 }
 ```
-## Launch
+## Запуск
 
 ``` 
 make up 
 ```
-## Migrate
+## Миграции
 ``` 
 make migrate 
 ```
